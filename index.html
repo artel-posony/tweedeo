@@ -1,1 +1,334 @@
-<h1>Tweedeo</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charSet="utf-8"/>
+<meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<style>
+    :root {
+        --color-blue: #1D9BF0;
+        --color-black: #14171A;
+        --color-darkGray: #586875;
+        --color-lightGray: #AAB8C2;
+        --color-xLightGray: #E1E8ED;
+        --color-white: #F5F8FA;
+        --color-purple: #aa2196;
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html, body {
+        color: var(--color-white);
+        background-color: var(--color-black);
+    }
+
+    html {
+        font-size: 62%;
+        font-family: "Helvetica Neue", sans-serif;
+        line-height: 1;
+    }
+
+    body {
+        font-size: 2rem;
+    }
+
+    strong {
+        font-weight: 600;
+    }
+
+    a {
+        color: var(--color-white);
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    .header {
+        background-color: var(--color-purple);
+        height: 115px;
+    }
+
+    .header__row {
+        display: flex;
+        flex: 1;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+
+    .header__app {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__app-logo {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        margin-right: 15px;
+    }
+
+    .header__app-name {
+        font-size: 1em;
+        font-weight: 500;
+    }
+
+    .header__term a {
+        font-size: 1em;
+        text-decoration: none;
+    }
+
+    .promo__app {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .promo__app-media {
+        margin-right: 30px;
+    }
+
+    .promo__app-logo {
+        width: 120px;
+        height: 120px;
+        border-radius: 20px;
+    }
+
+    .promo__app-name {
+        font-size: 3rem;
+    }
+</style>
+<style>
+     :root {
+        --iphone-width: 404px;
+        --iphone-height: 800px;
+        --iphone-color: #ccc;
+        --iphone-color-light: #ddd;
+        --iphone-color-dark: #bbb;
+    }
+
+    .iphone div {
+        display: block;
+        position: absolute;
+    }
+
+    .iphone {
+        width: var(--iphone-width);
+        height: var(--iphone-height);
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: 2%;
+        transform: translateX(-50%);
+    }
+
+    .frame_8 .iphone {
+        bottom: -24%;
+    }
+
+    .iphone .outer {
+        width: 98%;
+        height: 100%;
+        top: 0;
+        left: 1%;
+        border-radius: calc(var(--iphone-width) / 7);
+        background: var(--iphone-color);
+    }
+
+    .iphone .inner {
+        width: 94%;
+        height: 98%;
+        border-radius: calc(var(--iphone-width) / 8);
+        left: 3%;
+        top: 1%;
+        background: var(--iphone-color-light);
+    }
+
+    .iphone .screen {
+        background: #fff;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: var(--iphone-color-dark);
+        background-size: cover;
+        width: 86%;
+        height: 94%;
+        left: 7%;
+        top: 3%;
+        border-radius: calc(var(--iphone-width) / 12);
+        overflow: hidden;
+    }
+
+    .iphone .band {
+        width: 3%;
+        height: calc(var(--iphone-width) / 40);
+        background: var(--iphone-color-light);
+    }
+
+    .iphone .tl {
+        left: 1%;
+        top: calc(var(--iphone-height) / 8);
+    }
+
+    .iphone .tr {
+        right: 1%;
+        top: calc(var(--iphone-height) / 8);
+    }
+
+    .iphone .bl {
+        left: 1%;
+        bottom: calc(var(--iphone-height) / 8);
+    }
+
+    .iphone .br {
+        right: 1%;
+        bottom: calc(var(--iphone-height) / 8);
+    }
+
+    .iphone .speaker-section {
+        width: 48.5%;
+        height: 3.25%;
+        top: 3%;
+        left: 25.75%;
+        background: var(--iphone-color-light);
+        border-bottom-right-radius: calc(var(--iphone-width) / 20);
+        border-bottom-left-radius: calc(var(--iphone-width) / 20);
+    }
+
+    .iphone .speaker-section .scanner {
+        height: calc(var(--iphone-width) / 50);
+        width: calc(var(--iphone-width) / 50);
+        background: var(--iphone-color-dark);
+        border-radius: calc(var(--iphone-width) / 100);
+        left: 27.5%;
+        top: 25%;
+        transform: translate(0, -50%);
+    }
+
+    .iphone .speaker-section .camera {
+        height: calc(var(--iphone-width) / 40);
+        width: calc(var(--iphone-width) / 40);
+        background: var(--iphone-color-dark);
+        border-radius: calc(var(--iphone-width) / 80);
+        right: 26.5%;
+        top: 25%;
+        transform: translate(0, -50%);
+    }
+
+    .iphone .speaker-section .speaker {
+        width: 23%;
+        height: calc(var(--iphone-width) / 100);
+        background: var(--iphone-color-dark);
+        border-radius: calc(var(--iphone-width) / 100);
+        left: 50%;
+        top: 25%;
+        transform: translate(-50%, -50%);
+    }
+
+    .iphone .power,
+    .iphone .mute,
+    .iphone .vol {
+        width: 2%;
+        position: absolute;
+        background: var(--iphone-color);
+        border-radius: calc(var(--iphone-width) / 200);
+    }
+
+    .iphone .power {
+        height: 4%;
+        top: 15.5%;
+    }
+
+    .iphone .vol {
+        height: 7.25%;
+    }
+
+    .iphone .vol.up {
+        top: 24.5%;
+    }
+
+    .iphone .vol.down {
+        top: 33.5%;
+    }
+
+    .iphone .mute {
+        height: 11.5%;
+        top: 15.5%;
+        right: 0;
+    }
+</style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__row">
+                <div class="header__app">
+                    <img class="header__app-logo" src="./assets/logo.png" alt="Tweedeo">
+                    <span class="header__app-name">Tweedeo: Reels from Tweets</span>
+                </div>
+                <nav class="header__term">
+                    <a target="_blank" href="https://artel-posony.github.io/policy/tweedeo-app/tc.html">Terms & Conditions</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <article>
+        <div class="container">
+            <div class="promo">
+                <div class="promo__iphone">
+                    <div class="iphone" style="display: none;">
+                        <div class="outer"></div>
+                        <div class="inner"></div>
+                        <div class="band tl"></div>
+                        <div class="band tr"></div>
+                        <div class="band bl"></div>
+                        <div class="band br"></div>
+                        <div class="screen">
+
+                        </div>
+                        <div class="speaker-section">
+                            <div class="scanner"></div>
+                            <div class="speaker"></div>
+                            <div class="camera"></div>
+                        </div>
+                        <div class="power"></div>
+                        <div class="vol up"></div>
+                        <div class="vol down"></div>
+                        <div class="mute"></div>
+                    </div>
+                </div>
+                <div class="promo__action">
+                    <div class="promo__app">
+                        <div class="promo__app-media">
+                            <img class="promo__app-logo" src="./assets/logo.png" alt="Tweedeo">
+                        </div>
+                        <div class="promo__app-text">
+                            <h1 class="promo__app-name">Tweedeo: Reels from Tweets</h1>
+                            <h3 class="promo__app-subtitle">Convert Text to Short Video</h3>
+                            <h4 class="promo__app-cost">Free</h4>
+                        </div>
+                    </div>
+
+                    <div class="promo__slogan">
+
+                    </div>
+
+                    <div class="promo__appstore-link">
+                        <img src="./assets//apple-app-store-badge.svg" alt="Tweedeo in AppStore" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</body>
+</html>
