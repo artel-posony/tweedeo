@@ -89,13 +89,18 @@
     }
 
     .promo {
+        padding-top: 50px;
         display: flex;
         flex-direction: row;
     }
 
     .promo__iphone {
-        width: 400px;
+        width: 430px;
         position: relative;
+    }
+
+    .promo__action {
+        padding-top: 100px;
     }
 
     .promo__app {
@@ -103,6 +108,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        margin-bottom: 20px;
     }
 
     .promo__app-media {
@@ -123,10 +129,17 @@
     .promo__app-subtitle {
         font-size: 1.5rem;
         font-weight: normal;
+        color: var(--color-lightGray);
+        padding-bottom: 10px;
     }
 
     .promo__app-cost {
         font-size: 1rem;
+        font-weight: normal;
+    }
+
+    .promo__appstore-link img {
+        width: 180px;
     }
 </style>
 <style>
@@ -288,10 +301,10 @@
     <header class="header">
         <div class="container">
             <div class="header__row">
-                <div class="header__app">
+                <a class="header__app" href="https://apps.apple.com/app/id6447699938" target="_blank">
                     <img class="header__app-logo" src="./assets/logo.png" alt="Tweedeo">
                     <span class="header__app-name">Tweedeo: Reels from Tweets</span>
-                </div>
+                </a>
                 <nav class="header__term">
                     <a target="_blank" href="https://artel-posony.github.io/policy/tweedeo-app/tc.html">Terms & Conditions</a>
                 </nav>
