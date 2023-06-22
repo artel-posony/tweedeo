@@ -42,6 +42,7 @@
 
     a {
         color: var(--color-white);
+        text-decoration: none;
     }
 
     .container {
@@ -85,7 +86,16 @@
 
     .header__term a {
         font-size: 1em;
-        text-decoration: none;
+    }
+
+    .promo {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .promo__iphone {
+        width: 400px;
+        position: relative;
     }
 
     .promo__app {
@@ -106,13 +116,23 @@
     }
 
     .promo__app-name {
-        font-size: 3rem;
+        font-size: 2.5rem;
+        padding-bottom: 10px;
+    }
+
+    .promo__app-subtitle {
+        font-size: 1.5rem;
+        font-weight: normal;
+    }
+
+    .promo__app-cost {
+        font-size: 1rem;
     }
 </style>
 <style>
      :root {
-        --iphone-width: 404px;
-        --iphone-height: 800px;
+        --iphone-width: calc(404px * 0.9);
+        --iphone-height: calc(800px * 0.9);
         --iphone-color: #ccc;
         --iphone-color-light: #ddd;
         --iphone-color-dark: #bbb;
@@ -128,13 +148,8 @@
         height: var(--iphone-height);
         display: block;
         position: absolute;
-        left: 50%;
-        bottom: 2%;
-        transform: translateX(-50%);
-    }
-
-    .frame_8 .iphone {
-        bottom: -24%;
+        left: 0;
+        top: 0;
     }
 
     .iphone .outer {
@@ -167,6 +182,7 @@
         top: 3%;
         border-radius: calc(var(--iphone-width) / 12);
         overflow: hidden;
+        background-image: url(./assets/share.png);
     }
 
     .iphone .band {
@@ -286,7 +302,7 @@
         <div class="container">
             <div class="promo">
                 <div class="promo__iphone">
-                    <div class="iphone" style="display: none;">
+                    <div class="iphone">
                         <div class="outer"></div>
                         <div class="inner"></div>
                         <div class="band tl"></div>
@@ -308,7 +324,7 @@
                     </div>
                 </div>
                 <div class="promo__action">
-                    <div class="promo__app">
+                    <a class="promo__app" href="https://apps.apple.com/app/id6447699938" target="_blank">
                         <div class="promo__app-media">
                             <img class="promo__app-logo" src="./assets/logo.png" alt="Tweedeo">
                         </div>
@@ -317,7 +333,7 @@
                             <h3 class="promo__app-subtitle">Convert Text to Short Video</h3>
                             <h4 class="promo__app-cost">Free</h4>
                         </div>
-                    </div>
+                    </a>
 
                     <div class="promo__slogan">
 
